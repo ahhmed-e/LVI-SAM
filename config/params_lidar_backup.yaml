@@ -4,8 +4,8 @@ PROJECT_NAME: "lvi_sam"
 lvi_sam:
 
   # Topics
-  pointCloudTopic: "/velodyne_points"               # Point cloud data
-  imuTopic: "/imu/data"                         # IMU data
+  pointCloudTopic: "/points_raw"               # Point cloud data
+  imuTopic: "/imu_raw"                         # IMU data
 
   # Heading
   useImuHeadingInitialization: true          # if using GPS data, set to "true"
@@ -21,14 +21,14 @@ lvi_sam:
   downsampleRate: 1                           # default: 1. Downsample your data if too many points. i.e., 16 = 64 / 4, 16 = 16 / 1 
 
   # IMU Settings
-  imuAccNoise: 0.08
-  imuGyrNoise: 0.004
-  imuAccBiasN: 0.00004
-  imuGyrBiasN: 0.0001
-  imuGravity: 9.803
+  imuAccNoise: 3.9939570888238808e-03
+  imuGyrNoise: 1.5636343949698187e-03
+  imuAccBiasN: 6.4356659353532566e-05
+  imuGyrBiasN: 3.5640318696367613e-05
+  imuGravity: 9.80511
   
   # Extrinsics (lidar -> IMU)
-  extrinsicTrans: [0.1249, 0.0471, 0.0590]
+  extrinsicTrans: [0.0, 0.0, 0.0]
   extrinsicRot: [-1, 0, 0, 0, 1, 0, 0, 0, -1]
   extrinsicRPY: [0, 1, 0, -1, 0, 0, 0, 0, 1]
 
